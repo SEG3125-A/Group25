@@ -7,62 +7,73 @@ var products = [
 		name: "brocoli",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 1.99
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 2.35
 	},
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false,
 		price: 10.00
 	},
 	{
 		name: "chicken",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false,
 		price: 12.00
 	},
 	{
 		name: "rice",
 		vegetarian: true,
 		glutenFree: false,
+		organic: false,
 		price: 5.00
 	},
 	{
 		name: "quinoa",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 7.00
 	},
 	{
 		name: "salad",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 8.00
 	},
 	{
 		name: "chips",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 4.00
 	},
 	{
 		name: "ice-cream",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 5.00
 	},
 	{
 		name: "tomato",
 		vegetarian: true,
 		glutenFree: true,
+		organic: true,
 		price: 2.00
 	}
+
 ];
 	
 
