@@ -75,7 +75,7 @@ var products = [
 	}
 
 ];
-	
+
 
 
 // given restrictions provided, make a reduced list of products
@@ -83,18 +83,24 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+
+	for (let i = 0; i < prods.length; i += 1) {
+		
+		if (restriction == "Vegetarian" && prods[i].vegetarian == true) {
+		  product_names.push(prods[i].name);
+		} else if (restriction == "GlutenFree" && prods[i].glutenFree == true) {
+		  product_names.push(prods[i].name);
+		} else if ((restriction == "Organic") && (prods[i].organic == true) ) {
+		  product_names.push(prods[i].name);
+		} 
+		else if (restriction == "None") {
 			product_names.push(prods[i].name);
-		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
-		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name);
-		}
-	}
-	return product_names;
+		  }
+	  
+	
+	  }
+	  console.log(product_names)
+	  return product_names;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
