@@ -8,7 +8,7 @@ var products = [
     glutenFree: true,
     organic: true,
     price: 1.99,
-    image: "brocoli.jpg"
+    image: "brocoli.jpg",
   },
   {
     name: "bread",
@@ -16,7 +16,7 @@ var products = [
     glutenFree: false,
     organic: false,
     price: 2.35,
-    image: "bread.jpg"
+    image: "bread.jpg",
   },
   {
     name: "salmon",
@@ -24,7 +24,7 @@ var products = [
     glutenFree: true,
     organic: false,
     price: 10.0,
-    image: "salmon.jpg"
+    image: "salmon.jpg",
   },
   {
     name: "chicken",
@@ -32,7 +32,7 @@ var products = [
     glutenFree: true,
     organic: false,
     price: 12.0,
-    image: "chicken.jpg"
+    image: "chicken.jpg",
   },
   {
     name: "rice",
@@ -40,7 +40,7 @@ var products = [
     glutenFree: false,
     organic: false,
     price: 5.0,
-    image: "rice.jpg"
+    image: "rice.jpg",
   },
   {
     name: "quinoa",
@@ -48,7 +48,7 @@ var products = [
     glutenFree: true,
     organic: true,
     price: 7.0,
-    image: "quinoa.jpg"
+    image: "quinoa.jpg",
   },
   {
     name: "salad",
@@ -56,7 +56,7 @@ var products = [
     glutenFree: true,
     organic: true,
     price: 8.0,
-    image: "salad.jpg"
+    image: "salad.jpg",
   },
   {
     name: "chips",
@@ -64,7 +64,7 @@ var products = [
     glutenFree: true,
     organic: false,
     price: 4.0,
-    image: "chips.jpg"
+    image: "chips.jpg",
   },
   {
     name: "ice-cream",
@@ -72,7 +72,7 @@ var products = [
     glutenFree: true,
     organic: false,
     price: 5.0,
-    image: "icecream.jpg"
+    image: "icecream.jpg",
   },
   {
     name: "tomato",
@@ -80,7 +80,7 @@ var products = [
     glutenFree: true,
     organic: true,
     price: 2.0,
-    image: "tomato.jpg"
+    image: "tomato.jpg",
   },
 ];
 

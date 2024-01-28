@@ -17,6 +17,7 @@
   cursor: pointer;
   padding: 10px 12px;
   transition: 0.3s;
+  font-size: inherit;
 }
 
 /* Change background color of buttons on hover */
@@ -33,7 +34,7 @@
 
 /* Style the tab content */
 .tabcontent {
-  padding: 6px 12px;
+  padding: 0 12px 12px;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -47,4 +48,18 @@
 .page-footer {
   padding: 5px;
   text-align: center;
+}
+
+input[type="radio"]:checked + label {
+  font-weight: bolder; /* Example: Make the label bold for the selected radio button */
+}
+
+#addCart {
+  margin: 6px 0;
+}
+
+.font-size-change {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 0;
 }

@@ -15,6 +15,14 @@
   <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
 </div>
 
+<div class="font-size-change">
+	<label for="text-size">Text Size:</label>
+	<input type="radio" id="small" name="text-size" value="small" onclick="changeTextSize('small')"> Small
+	<input type="radio" id="medium" name="text-size" value="medium" onclick="changeTextSize('medium')" checked> Medium
+	<input type="radio" id="big" name="text-size" value="big" onclick="changeTextSize('big')"> Big
+</div>
+
+
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
@@ -31,8 +39,6 @@
 		<label for="Organic">Organic</label><br>
 		<input type="checkbox" id="None" name="None" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
 		<label for="None">None</label><br>
-
-	</select>
 </div>
 
 <div id="Products" class="tabcontent" style="display: none;">
