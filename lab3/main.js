@@ -84,6 +84,12 @@ function populateListProductChoices(slct1, slct2) {
     checkbox.name = "product";
     checkbox.value = productName;
     s2.appendChild(checkbox);
+    
+    // create an image element and set the source based on the product name
+    var image = document.createElement("img");
+    image.src = products.find(product => product.name === productName).image;
+    image.alt = productName + " Image";
+    image.style.width = "100px";
 
     // create a label for the checkbox, and also add in HTML DOM
     var label = document.createElement("label");
@@ -93,7 +99,18 @@ function populateListProductChoices(slct1, slct2) {
         productName + " - $" + getProductPrice(productName)
       )
     );
-    s2.appendChild(label);
+    
+      // create a container div for better alignment
+      var container = document.createElement("div");
+      container.className = "product-container";
+      container.appendChild(checkbox);
+      
+      container.appendChild(label);
+
+      container.appendChild(image);
+  
+      // append the container and a breakline to the HTML DOM
+      s2.appendChild(container);
 
     // create a breakline node and add in HTML DOM
     s2.appendChild(document.createElement("br"));
