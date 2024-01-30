@@ -21,17 +21,18 @@
   <p>Tell us a bit about you.</p>
 	Choose a Category:
 	<form id="restrictions" name="restrictions">
-		<input type="radio" id="Vegetarian" name="restriction" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
+    <input type="checkbox" id="Vegetarian" name="Vegetarian" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
 		<label for="Vegetarian">Vegetarian</label><br>
-		
-		<input type="radio" id="GlutenFree" name="restriction" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
+
+		<input type="checkbox" id="GlutenFree" name="GlutenFree" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
 		<label for="GlutenFree">GlutenFree</label><br>
-		
-		<input type="radio" id="Organic" name="restriction" value="Organic" onclick="populateListProductChoices('Organic', 'displayProduct')">
+
+		<input type="checkbox" id="Organic" name="Organic" value="Organic" onclick="populateListProductChoices('Organic', 'displayProduct')">
 		<label for="Organic">Organic</label><br>
-		
-		<input type="radio" id="None" name="restriction" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
+		<input type="checkbox" id="None" name="None" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
 		<label for="None">None</label><br>
+
+	</select>
 </div>
 
 <div id="Products" class="tabcontent" style="display: none;">
