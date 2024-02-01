@@ -143,9 +143,8 @@ var products = [
 function restrictListProducts(prods, restriction) {
   let product_names = [];
 
-  // Filter products based on the restriction
-  for (let i = 0; i < prods.length; i += 1) {
-    if (
+  for (let i = 0; i < prods.length; i++) {
+    if ((
       (restriction == "Vegetarian" && prods[i].vegetarian == true) ||
       (restriction == "GlutenFree" && prods[i].glutenFree == true) ||
       (restriction == "Organic" && prods[i].organic == true) ||
@@ -154,10 +153,11 @@ function restrictListProducts(prods, restriction) {
       (restriction == "Meat" && prods[i].meat == true) ||
       (restriction == "Fruit" && prods[i].fruit == true) ||
       restriction == "None"
-    ) {
+    ) ){
       product_names.push(prods[i]);
     }
   }
+
 
   // Sort the products by price in ascending order
   product_names.sort((a, b) => a.price - b.price);
@@ -168,6 +168,8 @@ function restrictListProducts(prods, restriction) {
   console.log(product_names);
   return product_names;
 }
+
+
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {

@@ -33,32 +33,26 @@
 		<p>Tell us a bit about you.</p>
 			Choose a Category:
 			<form id="restrictions" name="restrictions">
-			<!-- Inside the "Client" tab content -->
-<input type="checkbox" id="Vegetarian" name="restriction" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
-<label for="Vegetarian">Vegetarian</label><br>
-
-<input type="checkbox" id="GlutenFree" name="restriction" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
+			
+				<input type="radio" id="Vegetarian" name="restriction" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
+				<label for="Vegetarian">Vegetarian</label><br>
+				<input type="radio" id="GlutenFree" name="restriction" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
 <label for="GlutenFree">GlutenFree</label><br>
-
-<input type="checkbox" id="Organic" name="restriction" value="Organic" onclick="populateListProductChoices('Organic', 'displayProduct')">
-<label for="Organic">Organic</label><br>
-
-
-<input type="checkbox" id="Dairy" name="restriction" value="Dairy" onclick="populateListProductChoices('Dairy', 'displayProduct')">
+<input type="radio" id="Vegetable" name="restriction" value="Vegetable" onclick="populateListProductChoices('Vegetable', 'displayProduct')">
+<label for="None">Vegetable</label><br>
+<input type="radio" id="Fruit" name="restriction" value="Fruit" onclick="populateListProductChoices('Fruit', 'displayProduct')">
+<label for="None">Fruit</label><br>
+<input type="radio" id="Dairy" name="restriction" value="Dairy" onclick="populateListProductChoices('Dairy', 'displayProduct')">
 <label for="Organic">Dairy</label><br>
-
-<input type="checkbox" id="Vegetables" name="restriction" value="Vegetables" onclick="populateListProductChoices('Vegetables', 'displayProduct')">
-<label for="Organic">Vegetables</label><br>
-
-<input type="checkbox" id="Meat" name="restriction" value="Meat" onclick="populateListProductChoices('Meat', 'displayProduct')">
-<label for="Organic">Meat</label><br>
-
-<input type="checkbox" id="Fruit" name="restriction" value="Fruit" onclick="populateListProductChoices('Fruit', 'displayProduct')">
-<label for="Organic">Fruit</label><br>
-
-<input type="checkbox" id="None" name="restriction" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
+<input type="radio" id="Meat" name="restriction" value="Meat" onclick="populateListProductChoices('Meat', 'displayProduct')">
+<label for="None">Meat</label><br>
+<input type="radio" id="None" name="restriction" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
 <label for="None">None</label><br>
-</select>
+					
+					
+				  
+				 
+</form>
 
 		</div>
 		

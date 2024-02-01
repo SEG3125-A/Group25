@@ -116,6 +116,8 @@ function populateListProductChoices(slct1, slct2) {
     s2.appendChild(document.createElement("br"));
   }
 }
+
+
 function selectedItems() {
   var ele = document.getElementsByName("product");
   var chosenProducts = [];
@@ -143,6 +145,9 @@ function selectedItems() {
     )
   );
 }
+
+
+
 
 function changeTextSize(size) {
   var newSize;
