@@ -20,8 +20,12 @@ function openInfo(evt, tabName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
+  var currentTab = document.getElementById(tabName);
+  currentTab.style.display = "block";
   evt.currentTarget.className += " active";
+
+  // Update breadcrumb
+  updateBreadcrumb(tabName);
 
   // Additional code to hide specific elements based on the selected tab
   var tabToHide = "";
@@ -45,6 +49,32 @@ function openInfo(evt, tabName) {
     document.getElementById(tabToHide[i]).style.display = "none";
   }
 }
+
+function updateBreadcrumb(tabName) {
+  // Update breadcrumb based on the selected tab
+  var productBreadcrumb = document.getElementById("productBreadcrumb");
+  var clientBreadcrumb = document.getElementById("clientBreadcrumb");
+  var cartBreadcrumb = document.getElementById("cartBreadcrumb");
+
+  productBreadcrumb.classList.remove("activeBreadcrumb");
+  clientBreadcrumb.classList.remove("activeBreadcrumb");
+  cartBreadcrumb.classList.remove("activeBreadcrumb");
+
+  switch (tabName) {
+    case "Products":
+      productBreadcrumb.classList.add("activeBreadcrumb");
+      break;
+    case "Client":
+      clientBreadcrumb.classList.add("activeBreadcrumb");
+      break;
+    case "Cart":
+      cartBreadcrumb.classList.add("activeBreadcrumb");
+      break;
+    default:
+      break;
+  }
+}
+
 
 // Add event listeners for each tab button
 document.getElementById("Client").addEventListener("click", function (event) {

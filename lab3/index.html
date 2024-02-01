@@ -11,12 +11,13 @@
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="mainContainer">
-	<div class="sidenav">
-	
-		<button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  		<button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  		<button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-	</div>
+	<!-- Add a breadcrumb container -->
+<ul class="breadcrumb">
+	<li><span id="clientBreadcrumb" onclick="openInfo(event, 'Client')">Client</span></li>
+	<li><span id="productBreadcrumb" onclick="openInfo(event, 'Products')">Products</span></li>
+
+	<li><span id="cartBreadcrumb" onclick="openInfo(event, 'Cart')">Cart</span></li>
+</ul>
 	<div class="content">
 	
 		<div class="font-size-change">
