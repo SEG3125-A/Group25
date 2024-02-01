@@ -21,9 +21,9 @@
 	
 		<div class="font-size-change">
 			<label for="text-size">Text Size:</label>
-			<input type="radio" id="small" name="text-size" value="small" onclick="changeTextSize('small')"> Small
-			<input type="radio" id="medium" name="text-size" value="medium" onclick="changeTextSize('medium')" checked> Medium
-			<input type="radio" id="big" name="text-size" value="big" onclick="changeTextSize('big')"> Big
+			<input type="checkbox" id="small" name="text-size" value="small" onclick="changeTextSize('small')"> Small
+			<input type="checkbox" id="medium" name="text-size" value="medium" onclick="changeTextSize('medium')" checked> Medium
+			<input type="checkbox" id="big" name="text-size" value="big" onclick="changeTextSize('big')"> Big
 		</div>
 		
 		
@@ -34,54 +34,56 @@
 			Choose a Category:
 			<form id="restrictions" name="restrictions">
 			<!-- Inside the "Client" tab content -->
-<input type="radio" id="Vegetarian" name="restriction" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
+<input type="checkbox" id="Vegetarian" name="restriction" value="Vegetarian" onclick="populateListProductChoices('Vegetarian', 'displayProduct')">
 <label for="Vegetarian">Vegetarian</label><br>
 
-<input type="radio" id="GlutenFree" name="restriction" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
+<input type="checkbox" id="GlutenFree" name="restriction" value="GlutenFree" onclick="populateListProductChoices('GlutenFree', 'displayProduct')">
 <label for="GlutenFree">GlutenFree</label><br>
 
-<input type="radio" id="Organic" name="restriction" value="Organic" onclick="populateListProductChoices('Organic', 'displayProduct')">
+<input type="checkbox" id="Organic" name="restriction" value="Organic" onclick="populateListProductChoices('Organic', 'displayProduct')">
 <label for="Organic">Organic</label><br>
 
-<input type="radio" id="None" name="restriction" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
+
+<input type="checkbox" id="Dairy" name="restriction" value="Dairy" onclick="populateListProductChoices('Dairy', 'displayProduct')">
+<label for="Organic">Dairy</label><br>
+
+<input type="checkbox" id="Vegetables" name="restriction" value="Vegetables" onclick="populateListProductChoices('Vegetables', 'displayProduct')">
+<label for="Organic">Vegetables</label><br>
+
+<input type="checkbox" id="Meat" name="restriction" value="Meat" onclick="populateListProductChoices('Meat', 'displayProduct')">
+<label for="Organic">Meat</label><br>
+
+<input type="checkbox" id="Fruit" name="restriction" value="Fruit" onclick="populateListProductChoices('Fruit', 'displayProduct')">
+<label for="Organic">Fruit</label><br>
+
+<input type="checkbox" id="None" name="restriction" value="None" onclick="populateListProductChoices('None', 'displayProduct')">
 <label for="None">None</label><br>
+</select>
 
 		</div>
 		
 		<div id="Products" class="tabcontent" style="display: none;">
-		<h3>Your targeted products</h3>
-		<p>We preselected products based on your restrictions.</p>
-			Choose items to buy:
-			<div id="displayProduct"></div>
-			<button id="addCart" type="button" class="block" onclick="selectedItems()">
-				Add selected items to cart.
-			</button>
-			<div id="priceFilter">
-				<label for="priceRange">Filter by Price:</label>
-				<input type="range" id="priceRange" min="0" max="12" step="0.1" value="12" oninput="updatePriceFilter(this.value)">
-				<span id="priceValue">$12</span>
-			  </div>
-		</div>
-		
-		
-		<div id="Cart" class="tabcontent" style="display: none;">
-		<h3>Cart</h3>
-		<p>Here is your cart.</p>
-		<div id="displayCart"></div>
-		</div>
-	</div>
-  
-
-</div>
-
-
-
-
-<script src="groceries.js"></script>
-<script src="main.js"></script>
-<div class="page-footer">
-  <signature>Website designed by Shivan,Damien and Ayoub!</signature><br>
-</div>
-
-</body>
-</html>
+			<h3>Your targeted products</h3>
+			<p>We preselected products based on your restrictions.</p>
+			   Choose items to buy:
+			   <div id="displayProduct"></div>
+			   <button id="addCart" type="button" class="block" onclick="selectedItems()">
+				  Add selected items to cart.
+			  </button>
+		  </div>
+		  
+		  
+		  <div id="Cart" class="tabcontent" style="display: none;">
+			<h3>Cart</h3>
+			<p>Here is your cart.</p>
+			<div id="displayCart"></div>
+		  </div>
+		  
+		  <script src="groceries.js"></script>
+		  <script src="main.js"></script>
+		  <div class="page-footer">
+			<signature>Website designed by Shivan,Damien and Ayoub!</signature><br>
+		  </div>
+		  
+		  </body>
+		  </html>
