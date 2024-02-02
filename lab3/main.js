@@ -75,7 +75,6 @@ function updateBreadcrumb(tabName) {
   }
 }
 
-
 // Add event listeners for each tab button
 document.getElementById("Client").addEventListener("click", function (event) {
   openInfo(event, "Client");
@@ -147,7 +146,6 @@ function populateListProductChoices(slct1, slct2) {
   }
 }
 
-
 function selectedItems() {
   var ele = document.getElementsByName("product");
   var chosenProducts = [];
@@ -161,7 +159,9 @@ function selectedItems() {
   para.appendChild(document.createElement("br"));
   for (i = 0; i < ele.length; i++) {
     if (ele[i].checked) {
+      var price = getProductPrice(ele[i].value);
       para.appendChild(document.createTextNode(ele[i].value));
+      para.appendChild(document.createTextNode(" $" + price));
       para.appendChild(document.createElement("br"));
       chosenProducts.push(ele[i].value);
     }
@@ -170,14 +170,9 @@ function selectedItems() {
   // add paragraph and total price
   c.appendChild(para);
   c.appendChild(
-    document.createTextNode(
-      "Total Price is " + getTotalPrice(chosenProducts) + "$"
-    )
+    document.createTextNode("Total Price is $ " + getTotalPrice(chosenProducts))
   );
 }
-
-
-
 
 function changeTextSize(size) {
   var newSize;
