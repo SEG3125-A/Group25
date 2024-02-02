@@ -149,7 +149,7 @@ function restrictListProducts(prods, restriction) {
       (restriction == "GlutenFree" && prods[i].glutenFree == true) ||
       (restriction == "Organic" && prods[i].organic == true) ||
       (restriction == "Dairy" && prods[i].dairy == true) ||
-      (restriction == "Vegetables" && prods[i].vegetables == true) ||
+      (restriction == "Vegetable" && prods[i].vegetable == true) ||
       (restriction == "Meat" && prods[i].meat == true) ||
       (restriction == "Fruit" && prods[i].fruit == true) ||
       restriction == "None"
