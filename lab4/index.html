@@ -33,8 +33,8 @@
     <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
     <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Nice Scissors</h1>
-        <p>We'll take care of your hair!</p>
+        <h1>Welcome to uOttawa Cuts</h1>
+        <p>Want a fresh hair cut!?</p>
     </div>
 
     <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
@@ -204,45 +204,63 @@
             <h1>Erwind's and friends bike shop</h1>
             <p>Bike fixing is our business</p>
         </div>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+ 
+            <div class = "book"> 
+                <div class="container-fluid">
+                    <div class = "row" >
+                            <div class="col-sm-12" >
+                                Want to book an appointment?
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
-                </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
-                    </div>
-                </div>
+            <br>
+            <p class = "appointment">The services we propose:</p><br>
+            <div class="form-check">
+                <!-- <p3>what types of services do you want?</p3> -->
+                <input type="checkbox" class="form-check-input" id="serviceCheck1">
+                <label class="form-check-label" for="serviceCheck1">Simple Cut</label><br>
+                <input type="checkbox" class="form-check-input" id="serviceCheck2">
+                <label class="form-check-label" for="serviceCheck2">Hairwash</label><br>
+                <input type="checkbox" class="form-check-input" id="serviceCheck3">
+                <label class="form-check-label" for="serviceCheck3">Beard</label><br>
+                <input type="checkbox" class="form-check-input" id="serviceCheck3">
+                <label class="form-check-label" for="serviceCheck3">Blowout with curls</label><br>
+                <input type="checkbox" class="form-check-input" id="serviceCheck3">
+                <label class="form-check-label" for="serviceCheck3">Hair extensions</label><br>
+                <input type="checkbox" class="form-check-input" id="serviceCheck3">
+                <label class="form-check-label" for="serviceCheck3">Toner service</label><br>
             </div>
+            <br>
+            <div class ="form-group">
+                <p class = "appointment"></p>
+                <label for="dateTimeInput" class="col-sm-12">Choose your date and time</label> 
+                
+                <input class="form-control" type="datetime-local" name="dateTimeInput" id="dateTimeInput">
+            </div>
+            
+            
+            <form name="form">
+                <div class = "form-group">
+                    
+                    <p class = "appointment"></p>
+                    <label for="email" class="col-sm-12"> </label>Your Email</label> 
+                    <input type = "email" class = "form-control" name="emailAddress" id = "emailAddress" aria-describedby="emailHelp" placeholder="Enter your email address">
+                   
+                </div>
+            
+                <div class="form-group">
+                    <p class = "appointment"></p>
+                     <label for="phoneNumber" class="col-sm-12"> </label>Your phone Number</label> 
+                    <textarea class="form-control" id="phoneNumber" name="phoneNumber" rows="1" placeholder="Enter phone number"></textarea>
+                    <small>
+                        You will be sent a confirmation message for your appointment
+                    </small>
+                </div>
+            
+               
+             
+
         </div>
     </div>
 
