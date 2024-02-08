@@ -169,13 +169,13 @@
                 <div class="container-fluid">
                     <div class = "row" >
                             <div class="col-sm-12" >
-                                Want to book an appointment?
+                                <h3>Want to book an appointment?</h3>
                             </div>
                     </div>
                 </div>
             </div>
             <br>
-            <p class = "appointment">The services we propose:</p><br>
+            <p class = "appointment"><h4>The services we propose:</h4></p><br>
             <div class="form-check">
                 
 
@@ -199,29 +199,25 @@
             
             
             <form name="form">
-                <div class ="form-group">
-                    <p class = "appointment"></p>
-                    <label for="dateTimeInput" class="col-sm-12">Choose your date and time</label> 
-                    
+                <div class="form-group">
+                    <p class="appointment"></p>
+                    <label for="dateTimeInput" class="col-sm-12">Choose your date and time</label>
                     <input class="form-control" type="datetime-local" name="dateTimeInput" id="dateTimeInput">
                 </div>
-                <div class = "form-group">
-                    
-                    <p class = "appointment"></p>
-                    <label for="email" class="col-sm-12"> </label>Your Email</label> 
-                    <input type = "email" class = "form-control" name="emailAddress" id = "emailAddress" aria-describedby="emailHelp" placeholder="Enter your email address">
-                   
-                </div>
-            
                 <div class="form-group">
-                    <p class = "appointment"></p>
-                     <label for="phoneNumber" class="col-sm-12"> </label>Your phone Number</label> 
+                    <p class="appointment"></p>
+                    <label for="email" class="col-sm-12">Your Email</label>
+                    <input type="email" class="form-control" name="emailAddress" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <p class="appointment"></p>
+                    <label for="phoneNumber" class="col-sm-12">Your phone Number</label>
                     <textarea class="form-control" id="phoneNumber" name="phoneNumber" rows="1" placeholder="Enter phone number"></textarea>
                     <small>
                         You will be sent a confirmation message for your appointment
                     </small>
-                    
                 </div>
+                
                 <button onclick="validateForm()" type="button" class="btn btn-primary">Submit</button>
             </form>  
              
