@@ -13,3 +13,17 @@ h1 {
   height: 200px;
   object-fit: cover;
 }
+
+/* Style for input fields on hover */
+input:hover {
+  border-color: #6c757d; /* Change border color */
+  background-color: #f8f9fa; /* Change background color */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Style for input fields when focused */
+input:focus {
+  border-color: #007bff; /* Change border color */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add box shadow */
+  outline: none; /* Remove default focus outline */
+}
