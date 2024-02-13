@@ -20,6 +20,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="alert.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
     <!-- Your own additional style sheet -->
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
@@ -201,6 +205,14 @@
 
             <form name="form">
                 <div class="form-group">
+                    <label for="stylistChoice" class="col-sm-12">Choose Your Stylist</label>
+                    <select class="form-control" id="stylistChoice" name="stylistChoice">
+                        <option value="sarah">Sarah</option>
+                        <option value="mike">Mike</option>
+                        <option value="mike">Emily</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <p class="appointment"></p>
                     <label for="dateTimeInput" class="col-sm-12">Choose your date and time</label>
                     <input class="form-control" type="datetime-local" name="dateTimeInput" id="dateTimeInput">
@@ -219,10 +231,37 @@
                     </small>
                 </div>
                 
-                <button onclick="validateForm()" type="button" class="btn btn-primary">Submit</button>
+                
             </form>  
-             
-
+            <div class="container">
+                <div class="payment-info">
+                    <div class="col-sm-12">
+                        <h3>Confirm Payment</h3>
+        
+                        <div class="form-group">
+                            <label for="cname">CARDHOLDER NAME</label>
+                            <input type="text" id="cardholderName" name="name" class="form-control" placeholder="First and Last Name"title="We ask you to input your full name.">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="ccnum">Card Number</label>
+                            <input type="text" id="cardnumber" name="cardnumber" class="form-control" placeholder="Card Number"title="Enter 16 digits" required>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="expirydate">Expiry Date</label>
+                                <input type="text" id="expirydate" name="expirydate" class="form-control" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cvv">CVV</label>
+                                <input type="number" id="cvv" name="cvv" class="form-control" placeholder="Last 3 digits"title="Last 3 digits at the back of your card">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="validateForm()" type="button" class="btn btn-primary">Submit</button>
         </div>
     </div>
 
