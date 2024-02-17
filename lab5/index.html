@@ -35,17 +35,39 @@
     <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
     <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <div class="row justify-content-end">
-            <div class="col">
-                <h1>Welcome to uOttawa Cuts</h1>
-                <p>Want a fresh haircut!?</p>
+    <div class="container-md p-1 my-3 border bg-dark text-white">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
+            <div class="container-fluid">
+                <a id="navbar-title" class="navbar-brand" href="#">uOttawa Cuts</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#services">Our Services</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link " href="#stylists">Our Stylists</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#appointment">Appointment/Payment</a>
+                        </li>   
+                    </ul>
+                    
+                    <ul id="logo" class="ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link"><img src="Hair Salon Logo.png" alt="Company Logo" class="img-fluid" style="max-width: 150px;"></a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-            <div class="col-auto">
-                <img src="Hair Salon Logo.png" alt="Company Logo" class="img-fluid" style="max-width: 200px;">
-            </div>
-        </div>
+            
+        </nav>
+    
     </div>
+    
 
     <!-- Section for Address and Google Maps -->
     <div class="container">
@@ -59,8 +81,10 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2>Our Services</h2>
+    <div id="services" class="container">
+        <h2><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16">
+            <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+          </svg></i>Our Services</h2>
         <div class="row mb-4">
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch">
                 <div class="card" style="width: 18rem;">
@@ -133,8 +157,10 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2>Meet Our Stylists</h2>
+    <div id="stylists" class="container">
+        <h2><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+          </svg>Meet Our Stylists</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -167,13 +193,15 @@
     </div>
     
     
-    <div class="container">
+    <div id="appointment" class="container">
         
             <div class = "book"> 
                 <div class="container-fluid">
                     <div class = "row" >
-                            <div class="col-sm-12" >
-                                <h3>Want to book an appointment?</h3>
+                            <div class="col-sm-12 pt-2" >
+                                <h3><svg class="mr-2 " xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
+                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+                                  </svg>Want to book an appointment?</h3>
                             </div>
                     </div>
                 </div>
@@ -236,7 +264,9 @@
             <div class="container">
                 <div class="payment-info">
                     <div class="col-sm-12">
-                        <h3>Confirm Payment</h3>
+                        <h3><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"/>
+                          </svg>Confirm Payment</h3>
         
                         <div class="form-group">
                             <label for="cname">CARDHOLDER NAME</label>
