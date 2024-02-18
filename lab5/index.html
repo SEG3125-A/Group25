@@ -23,8 +23,6 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-   
-    <!-- Your own additional style sheet -->
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -241,9 +239,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <p class="appointment"></p>
-                    <label for="dateTimeInput" class="col-sm-12">Choose your date and time</label>
-                    <input class="form-control" type="datetime-local" name="dateTimeInput" id="dateTimeInput">
+                    <div class="form-group">
+                        <p class="appointment"></p>
+                        <label for="dateTimeInput" class="col-sm-12">Choose your date and time</label>
+                        <div class="d-inline-flex">
+                            <input class="form-control me-2" type="text" name="dateInput" id="dateInput" placeholder="YYYY-MM-DD">
+                            <input class="form-control" type="time" id="timeInput">
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <p class="appointment"></p>
@@ -261,9 +264,8 @@
                 
                 
             </form>  
-            <div class="container">
                 <div class="payment-info">
-                    <div class="col-sm-12">
+                    <div>
                         <h3><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"/>
                           </svg>Confirm Payment</h3>
@@ -290,7 +292,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <button onclick="validateForm()" type="button" class="btn btn-primary">Submit</button>
         </div>
     </div>
