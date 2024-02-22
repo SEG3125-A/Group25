@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Game store UI Survey</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Game Store UI Survey</h1>
+      <p>Help us improve by providing your valuable feedback.</p>
+    </header>
+    <br />
+
+    <h2 class="sec_header">
+      We get our games here on our:
+      <a href="https://www.playstation.com/en-gb/"> Game Store </a>
+    </h2>
+
+    <a href="https://www.playstation.com/en-gb/"
+      ><img id="website-img" src="download.png" alt="PlayStation"
+    /></a>
+    <br />
+
+    <section id="survey-form">
+      <form action="#" method="post">
+        <div class="question">
+          <label for="textQuestion"
+            >1. What do you think about the overall design of the
+            website?</label
+          >
+          <textarea
+            id="textQuestion"
+            name="textQuestion"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </div>
+
+        <div class="question">
+          <label>2. How would you rate the navigation?</label>
+          <input type="radio" name="navigationRating" value="excellent" />
+          Excellent
+          <input type="radio" name="navigationRating" value="good" /> Good
+          <input type="radio" name="navigationRating" value="average" /> Average
+          <input type="radio" name="navigationRating" value="poor" /> Poor
+        </div>
+
+        <div class="question">
+          <label>3. How would you rate the content quality?</label>
+          <input type="radio" name="contentQualityRating" value="excellent" />
+          Excellent
+          <input type="radio" name="contentQualityRating" value="good" /> Good
+          <input type="radio" name="contentQualityRating" value="average" />
+          Average
+          <input type="radio" name="contentQualityRating" value="poor" /> Poor
+        </div>
+
+        <div class="question">
+          <label
+            >4. Which of the following best describes your opinion on the
+            website layout?</label
+          >
+          <select name="layoutRating">
+            <option value="wellOrganized">Well Organized</option>
+            <option value="confusing">Confusing</option>
+            <option value="neutral">Neutral</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>5. What features would you like to see improved?</label>
+          <input type="checkbox" name="feature" value="responsive" /> Responsive
+          Design <input type="checkbox" name="feature" value="speed" /> Loading
+          Speed <input type="checkbox" name="feature" value="content" /> Content
+          Quality
+        </div>
+
+        <div class="question">
+          <label for="comments"
+            >6. Any additional comments or suggestions?</label
+          >
+          <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="question">
+          <label
+            >7. How likely are you to recommend this website to others?</label
+          >
+          <input type="number" name="recommendation" min="0" max="10" />
+        </div>
+
+        <button id="submitButton" type="button" class="block">
+          Submit your form!
+        </button>
+
+        <footer id="signature">
+          Website designed by Shivan,Damien and Ayoub!
+        </footer>
+      </form>
+    </section>
+  </body>
+</html>
