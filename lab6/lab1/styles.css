@@ -18,7 +18,7 @@ header {
 .carousel-item img {
   display: block;
   margin: 20px auto;
-  width: 70%;
+  width: 50%;
   height: 500px;
   object-fit: cover;
 }

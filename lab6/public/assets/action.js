@@ -1,23 +1,16 @@
-// jQuery that will "listen" to the html index.html
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("survey-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting normally
 
-  $('form').on('submit', function(){
-      
-      // var item = $('form input');
-      // console.log(item.serializeArray());
+      // Serialize form data
+      var formData = new FormData(this);
 
-      $.ajax({
-        type: 'POST',
-        url: '/index',
-        data: $(this).serializeArray(),
-        success: function(data){
-          // do something with the data via front-end framework
-          // Make the submit button red, disabled and saying Thank you
-          $("#bb").css("background-color", "red");
-          $("#bb").prop("disabled", "true");
-          $("#bb").text("Thank you!");
-        }
-      });
-      return false;
-  });
+      // Update the UI on successful submission
+      var submitButton = document.getElementById("bb");
+      submitButton.style.backgroundColor = "red";
+      submitButton.disabled = true;
+      submitButton.textContent = "Thank you!";
+    });
 });
