@@ -47,9 +47,10 @@ module.exports = function(app){
         var contentQualityRating=readData("contentQualityRating");
         var layout=readData("layoutRating");
         var feature=readData("feature");
+        var comments=readData("comments")
         var recommendation=readData("recommendation");
-        res.render('showResults', {results: [opinion,navigation,contentQualityRating,layout,feature,recommendation]});
-        console.log([opinion,navigation,contentQualityRating,layout,feature,recommendation]);
+        res.render('showResults', {results: [opinion,navigation,contentQualityRating,layout,feature,comments,recommendation]});
+        console.log([opinion,navigation,contentQualityRating,layout,feature,comments,recommendation]);
     });
 
     // when a user goes to localhost:3000/index
