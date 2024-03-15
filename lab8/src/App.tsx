@@ -1,24 +1,26 @@
+// App.js
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ProductList from './components/ProductList';
+import Cart from './components/Cart';
+import Ratings from './components/Ratings';
+import Logo from './components/Logo'; // Import the Logo component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="main-content">
+        {/* Move Ratings, ProductList, and Cart to the bottom left */}
+        <div className="top-middle-content">
+          <Logo /> {/* Use the Logo component */}
+          <h1 className="title">uoBooks</h1>
+        </div>
+        <div className="bottom-left-content">
+          <Ratings />
+          <ProductList />
+          <Cart />
+        </div>
+      </div>
     </div>
   );
 }
