@@ -48,3 +48,22 @@
   height: 350px; /* Adjust the height as needed */
 }
 
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.navigation-bar > * {
+  margin: 0 5px;
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navigation-bar span {
+  font-weight: bold;
+}

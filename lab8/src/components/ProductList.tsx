@@ -9,6 +9,7 @@ import book6img from '../assets/themanwiththgoldengun.jpg';
 import book7img from '../assets/casinoroyale.jpg';
 import book8img from '../assets/mesopotamia.jpg';
 import { Link } from 'react-router-dom';
+import NavigationBar from './NavigationBar';
 
  
 
@@ -19,7 +20,9 @@ function ProductList() {
     Navigate('/');
   };
   return (
+    
     <div className="product-list">
+      <NavigationBar />
       <h2>Our book selections:</h2>
       <div className="card-container">
         <div className="card" style={{ width: "18rem" }}>
