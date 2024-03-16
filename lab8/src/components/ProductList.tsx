@@ -93,6 +93,7 @@ function ProductList() {
   };
   return (
     <div className="product-list" style={{ margin: '20px 80px' }}>
+      <NavigationBar />
       <h2>Our book selections:</h2>
       <div className="card-container">
         <div className="card" style={{ width: "18rem" }}>
@@ -171,7 +172,7 @@ function ProductList() {
       </div>
 
       <div className="appointment-section">
-        <h3>Want to rent an book?</h3>
+        <h3>Want to rent an book? Select your choices:</h3>
 
         {/* Checkbox list for books */}
         <div className="form-check">
@@ -233,7 +234,7 @@ function ProductList() {
 
         {/* Date Picker for Appointment */}
         <div className="form-group" style={{ marginBottom: '20px' }}>
-          <label htmlFor="appointmentDate" style={{ display: 'block', marginBottom: '5px' }}>Choose your date</label>
+          <label htmlFor="appointmentDate" style={{ display: 'block', marginBottom: '5px' }}>Choose your date you want to start to rent:</label>
           <DatePicker
             selected={startDate}
             onChange={(date: React.SetStateAction<Date>) => setStartDate(date)}
