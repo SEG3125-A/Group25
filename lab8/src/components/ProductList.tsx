@@ -191,6 +191,22 @@ function ProductList() {
               <input type="checkbox" className="form-check-input" id="bookCheck4" />
               <label className="form-check-label" htmlFor="bookCheck4">Goldfinger</label>
           </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck5" />
+              <label className="form-check-label" htmlFor="bookCheck5">Gone With The Wind</label>
+          </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck6" />
+              <label className="form-check-label" htmlFor="bookCheck6">The Man With The Golden Gun</label>
+          </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck7" />
+              <label className="form-check-label" htmlFor="bookCheck7">Casino Royale</label>
+          </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck8" />
+              <label className="form-check-label" htmlFor="bookCheck8">Muder in Mesopotamia</label>
+          </div>
         </div>
 
       </div>
