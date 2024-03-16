@@ -1,21 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import book1img from '../assets/servetowin.jpg';
 import book2img from '../assets/arsenewenger.jpg';
 import book3img from '../assets/godfather.jpg';
 import book4img from '../assets/goldfinger.jpg';
 import { Link } from 'react-router-dom';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
  
 
 function ProductList() {
   const Navigate = useNavigate();
 
+  const [startDate, setStartDate] = useState(new Date());
+
+  // Function to check if a day is a weekend
+  const isWeekday = (date: { getDay: () => any; }) => {
+    const day = date.getDay();
+    return day !== 0 && day !== 6; // 0 = Sunday, 6 = Saturday
+  };
+
+  const [paymentDetails, setPaymentDetails] = useState({
+    email: '',
+    cardholderName: '',
+    cardNumber: '',
+    expiryDate: '',
+    cvv: '',
+  });
+
+  const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
+    const { name, value } = event.target;
+    setPaymentDetails({
+      ...paymentDetails,
+      [name]: value,
+    });
+  };
+
+  const isValidEmail = (email: string) => {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+  const isValidCardholderName = (name: string) => {
+    var nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+    return nameRegex.test(name);
+  }
+  const isValidCreditCard = (cardNumber: string) => {
+    var cardNumberRegex = /^[0-9]{16}$/;
+    return cardNumberRegex.test(cardNumber);
+  }
+  const isValidExpiryDate = (expiryDate: string) => {
+    var expiryDateRegex = /^(0[1-9]|1[0-2])\/[0-9]{2}$/;
+    return expiryDateRegex.test(expiryDate);
+  }
+  const isValidCVV = (cvv: string) => {
+    var cvvRegex = /^[0-9]{3}$/;
+    return cvvRegex.test(cvv);
+  }
+
+  const ValidateForm = () => {
+    if (!isValidEmail(paymentDetails.email)) {
+      alert("Invalid email address. Please enter a valid email.");
+      return false;
+    }
+    if (!isValidCardholderName(paymentDetails.cardholderName)) {
+      alert("Invalid cardholder name. Please enter a valid name.");
+      return false;
+    }
+    if (!isValidCreditCard(paymentDetails.cardNumber)) {
+      alert("Invalid credit card number. Please enter a valid 16-digit number.");
+      return false;
+    }
+    if (!isValidExpiryDate(paymentDetails.expiryDate)) {
+      alert("Invalid expiry date. Please enter date in MM/YY format.");
+      return false;
+    }
+    if (!isValidCVV(paymentDetails.cvv)) {
+      alert("Invalid CVV. Please enter a valid 3-digit number.");
+      return false;
+    }
+    alert("Form submitted!");
+    return true
+  }
+
   const GoBack = () => {
     Navigate('/');
   };
   return (
-    <div className="product-list">
+    <div className="product-list" style={{ margin: '20px 80px' }}>
       <h2>Our book selections:</h2>
       <div className="card-container">
         <div className="card" style={{ width: "18rem" }}>
@@ -56,10 +128,99 @@ function ProductList() {
         </div>
         {/* Add more card components here */}
       </div>
-      <div className="text-center">
-        <button className="btn btn-primary" onClick={GoBack}>Go back</button>
+
+      <div className="appointment-section">
+        <h3>Want to rent an book?</h3>
+
+        {/* Checkbox list for books */}
+        <div className="form-check">
+          <div>
+            <input type="checkbox" className="form-check-input" id="bookCheck1" />
+            <label className="form-check-label" htmlFor="bookCheck1">Serve to Win</label>
+          </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck2" />
+              <label className="form-check-label" htmlFor="bookCheck2">Arsène Wenger</label>
+          </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck3" />
+              <label className="form-check-label" htmlFor="bookCheck3">The Godfather</label>
+          </div>
+          <div>
+              <input type="checkbox" className="form-check-input" id="bookCheck4" />
+              <label className="form-check-label" htmlFor="bookCheck4">Goldfinger</label>
+          </div>
+        </div>
+
       </div>
-    </div>
+
+      <div className="booking-form" style={{ maxWidth: '400px'}}>
+        {/* Name Input */}
+        <div className="form-group" style={{ margin: '10px 0' }}>
+            <label htmlFor="name" style={{ display: 'block', marginBottom: '5px' }}>Your Name</label>
+            <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Enter your name"
+                style={{ display: 'block', width: '100%' }}
+            />
+        </div>
+
+        {/* Email Input */}
+        <div className="form-group" style={{ margin: '10px 0' }}>
+            <label htmlFor="emailAddress" style={{ display: 'block', marginBottom: '5px' }}>Your Email</label>
+            <input type="email" className="form-control" id="emailAddress" name="email" value={paymentDetails.email} placeholder="Enter your email address" onChange={handleInputChange} style={{ display: 'block', width: '100%' }}
+            />
+        </div>
+
+        {/* Date Picker for Appointment */}
+        <div className="form-group" style={{ marginBottom: '20px' }}>
+          <label htmlFor="appointmentDate" style={{ display: 'block', marginBottom: '5px' }}>Choose your date</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date: React.SetStateAction<Date>) => setStartDate(date)}
+            filterDate={isWeekday}
+            className="form-control"
+          />
+        </div>
+      </div>
+
+      <div className="payment-form">
+      <h3>Payment Details</h3>
+        {/* Cardholder Name */}
+        <div className="form-group" style={{ margin: '10px 0' }}>
+          <label htmlFor="cardholderName" style={{ display: 'block', marginBottom: '5px' }}>Cardholder Name</label>
+          <input type="text" className="form-control" id="cardholderName" name="cardholderName" value={paymentDetails.cardholderName} onChange={handleInputChange} placeholder="Enter cardholder's name" />
+        </div>
+
+        {/* Card Number */}
+        <div className="form-group" style={{ margin: '10px 0' }}>
+          <label htmlFor="cardNumber" style={{ display: 'block', marginBottom: '5px' }}>Credit Card Number</label>
+          <input type="text" className="form-control" id="cardNumber" name="cardNumber" value={paymentDetails.cardNumber} onChange={handleInputChange} placeholder="Enter card number"
+          />
+        </div>
+
+        {/* Expiry Date and CVV */}
+        <div className="form-group" style={{ display: 'flex', margin: '10px 0' }}>
+          <div style={{marginRight: '10px' }}>
+            <label htmlFor="expiryDate" style={{ display: 'block', marginBottom: '5px' }}>Expiry Date</label>
+            <input type="text" className="form-control" id="expiryDate" name="expiryDate" value={paymentDetails.expiryDate} onChange={handleInputChange} placeholder="MM/YY" />
+          </div>
+
+          <div>
+            <label htmlFor="cvv" style={{ display: 'block', marginBottom: '5px' }}>CVV</label>
+            <input type="text" className="form-control" id="cvv" name="cvv" value={paymentDetails.cvv} onChange={handleInputChange} placeholder="CVV" />
+          </div>
+        </div>
+      </div>
+
+      <div className="form-group" style={{ display: 'flex', margin: '20px 0' }}>
+        <button className="btn btn-primary" style={{ marginRight: '10px' }} onClick={GoBack}>Go back</button>
+        <button className="btn btn-primary" style={{ marginRight: '10px' }} onClick={ValidateForm}>Confirm</button>
+      </div>
+
+  </div>  
   );
 }
 
