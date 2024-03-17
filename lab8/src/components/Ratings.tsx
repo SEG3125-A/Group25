@@ -136,7 +136,10 @@ function Ratings() {
         >
           Back
         </button>
-        <button type="submit">Confirm</button>
+       
+        <button className="btn btn-primary"
+          style={{ marginRight: "10px" }}
+        type="submit">Confirm</button>
       </form>
     </div>
   );

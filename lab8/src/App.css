@@ -67,3 +67,56 @@
 .navigation-bar span {
   font-weight: bold;
 }
+/* Custom styles for buttons */
+/* Custom styles for buttons */
+.btn-custom {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-custom:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Custom styles for the link */
+.switch-language-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.switch-language-link:hover {
+  text-decoration: underline;
+}
+

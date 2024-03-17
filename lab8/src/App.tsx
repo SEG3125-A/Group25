@@ -55,6 +55,7 @@ function HomePage() {
               </Link>
             </li>
           </ul>
+          <Link to="/french" className="switch-language-link">Switch to French</Link>
         </nav>
       </div>
     </div>
