@@ -31,7 +31,6 @@ function HomePage() {
     <div className="main-content">
       <div className="top-middle-content">
         <Logo /> {/* Use the Logo component */}
-        <h1 className="title">uoBooks</h1>
       </div>
       <div className="bottom-left-content">
         {/* Navigation Links */}
