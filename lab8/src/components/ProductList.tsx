@@ -305,6 +305,7 @@ function ProductList() {
             id="name"
             placeholder="Enter your name"
             style={{ display: "block", width: "100%" }}
+            title="Enter your name here"
           />
         </div>
 
@@ -325,6 +326,7 @@ function ProductList() {
             placeholder="Enter your email address"
             onChange={handleInputChange}
             style={{ display: "block", width: "100%" }}
+            title="Enter your email address here"
           />
         </div>
 
@@ -363,6 +365,7 @@ function ProductList() {
             value={paymentDetails.cardholderName}
             onChange={handleInputChange}
             placeholder="Enter cardholder's name"
+            title="Enter your cardholder's name here"
           />
         </div>
 
@@ -382,6 +385,7 @@ function ProductList() {
             value={paymentDetails.cardNumber}
             onChange={handleInputChange}
             placeholder="Enter card number"
+            title="Enter your number here"
           />
         </div>
 
@@ -405,6 +409,7 @@ function ProductList() {
               value={paymentDetails.expiryDate}
               onChange={handleInputChange}
               placeholder="MM/YY"
+              title="Enter your card's expiry date here"
             />
           </div>
 
@@ -423,6 +428,7 @@ function ProductList() {
               value={paymentDetails.cvv}
               onChange={handleInputChange}
               placeholder="CVV"
+              title="Enter your card's verification value here"
             />
           </div>
         </div>
