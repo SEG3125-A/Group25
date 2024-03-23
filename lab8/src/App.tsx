@@ -1,7 +1,6 @@
-// App.js
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Help from "./components/Help";
 import Ratings from "./components/Ratings";
@@ -10,23 +9,31 @@ import ProductList from "./components/ProductList";
 import { TfiHelpAlt } from "react-icons/tfi";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { RiStarSFill } from "react-icons/ri";
+import AppFr from './components/AppFr';
 
 function App() {
+  const [language, setLanguage] = useState<string>('english');
+
+  const handleLanguageSwitch = () => {
+    setLanguage(language === 'english' ? 'french' : 'english');
+  };
+  
   return (
     <Router>
       <div className="container">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage language={language} handleLanguageSwitch={handleLanguageSwitch} />} />
           <Route path="/ratings" element={<Ratings />} />
           <Route path="/product-list" element={<ProductList />} />
           <Route path="/Help" element={<Help />} />
+          <Route path="/AppFr" element={<AppFr />} />
         </Routes>
       </div>
     </Router>
   );
 }
 
-function HomePage() {
+function HomePage({ language, handleLanguageSwitch }: { language: string, handleLanguageSwitch: () => void }) {
   return (
     <div className="main-content">
       <div className="top-middle-content">
@@ -55,7 +62,9 @@ function HomePage() {
               </Link>
             </li>
           </ul>
-          <Link to="/french" className="switch-language-link">Switch to French</Link>
+          <Link to={language === 'english' ? "/AppFr" : "/"} className="switch-language-link" onClick={handleLanguageSwitch}>
+            {language === 'english' ? 'Switch to French' : 'Switch to English'}
+          </Link>
         </nav>
       </div>
     </div>
