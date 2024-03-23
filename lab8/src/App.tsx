@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import Help from "./components/Help";
 import Ratings from "./components/Ratings";
 import Logo from "./components/Logo"; // Import the Logo component
@@ -10,6 +9,9 @@ import { TfiHelpAlt } from "react-icons/tfi";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { RiStarSFill } from "react-icons/ri";
 import AppFr from './components/AppFr';
+import RatingsFr from "./components/RatingsFr";
+import ProductListFr from "./components/ProductListFr";
+import HelpFr from "./components/HelpFr";
 
 function App() {
   const [language, setLanguage] = useState<string>('english');
@@ -22,11 +24,16 @@ function App() {
     <Router>
       <div className="container">
         <Routes>
-          <Route path="/" element={<HomePage language={language} handleLanguageSwitch={handleLanguageSwitch} />} />
+          <Route path="/" element={<HomePage language='english' handleLanguageSwitch={handleLanguageSwitch} />} />
           <Route path="/ratings" element={<Ratings />} />
           <Route path="/product-list" element={<ProductList />} />
           <Route path="/Help" element={<Help />} />
-          <Route path="/AppFr" element={<AppFr />} />
+          <Route path="/AppFr">
+            <Route index element={<AppFr />} />
+            <Route path="/AppFr/RatingsFr" element={<RatingsFr />} />
+            <Route path="/AppFr/product-listFr" element={<ProductListFr />} />
+            <Route path="/AppFr/HelpFr" element={<HelpFr />} />
+          </Route>
         </Routes>
       </div>
     </Router>

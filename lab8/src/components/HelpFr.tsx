@@ -4,7 +4,7 @@ function HelpFr() {
   return (
     <div className="HelpFr">
       <NavigationBar />
-      <h2>Help section</h2>
+      <h2>HelpFr section</h2>
 
       {/* Your Help content goes here */}
     </div>
