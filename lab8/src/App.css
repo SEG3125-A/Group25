@@ -82,6 +82,7 @@
 }
 
 .btn-primary {
+  margin-top: 3px;
   background-color: #0400ff;
   color: #fff;
 }
@@ -91,7 +92,8 @@
   color: #fff;
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
   color: #fff;
 }
 
@@ -119,4 +121,3 @@
 .switch-language-link:hover {
   text-decoration: underline;
 }
-

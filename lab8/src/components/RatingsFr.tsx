@@ -20,17 +20,17 @@ const validateForm = (values: FormValues): FormErrors => {
 
   // Validate Name
   if (!values.name.trim()) {
-    errors.name = "Name is required";
+    errors.name = "Le nom est requis";
   }
 
   // Validate Book Title
   if (!values.bookTitle.trim()) {
-    errors.bookTitle = "Book Title is required";
+    errors.bookTitle = "Le titre du livre est requis";
   }
 
   // Validate Rating
   if (values.rating < 1 || values.rating > 5) {
-    errors.rating = "Rating must be between 1 and 5";
+    errors.rating = "L'évaluation doit être comprise entre 1 et 5";
   }
 
   return errors;
@@ -60,7 +60,7 @@ function RatingsFr() {
       const firstErrorKey = Object.keys(errorMessage)[0];
       alert(errorMessage[firstErrorKey]);
     } else {
-      alert("Form submitted");
+      alert("Formulaire soumis");
     }
   };
   return (
@@ -76,7 +76,7 @@ function RatingsFr() {
             htmlFor="name"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Name
+            Nom
           </label>
           <input
             id="name"
@@ -84,7 +84,7 @@ function RatingsFr() {
             value={formValues.name}
             onChange={handleChange}
             style={{ display: "block", width: "100%" }}
-            placeholder="Enter name"
+            placeholder="Entrer le nom"
           />
         </div>
 
@@ -93,7 +93,7 @@ function RatingsFr() {
             htmlFor="bookTitle"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Book Title
+            Titre du livre
           </label>
           <input
             id="bookTitle"
@@ -101,7 +101,7 @@ function RatingsFr() {
             value={formValues.bookTitle}
             onChange={handleChange}
             style={{ display: "block", width: "100%" }}
-            placeholder="Enter book title"
+            placeholder="Entrez le titre du livre"
           />
         </div>
 
@@ -110,13 +110,13 @@ function RatingsFr() {
             htmlFor="rating"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Rating
+            Evaluation
           </label>
           <input
             id="rating"
             name="rating"
             type="number"
-            placeholder="Enter a number between 1 and 5"
+            placeholder="Entrez un nombre entre 1 et 5"
             onChange={handleChange}
             style={{ display: "block", width: "100%" }}
           />
@@ -124,7 +124,7 @@ function RatingsFr() {
 
         <div>
           <label style={{ display: "block", marginBottom: "5px" }}>
-            Comments
+            Commentaires
           </label>
           <textarea style={{ display: "block", width: "100%" }} />
         </div>
@@ -134,12 +134,16 @@ function RatingsFr() {
           style={{ marginRight: "10px" }}
           onClick={GoBack}
         >
-          Back
+          Retour
         </button>
-       
-        <button className="btn btn-primary"
+
+        <button
+          className="btn btn-primary"
           style={{ marginRight: "10px" }}
-        type="submit">Confirm</button>
+          type="submit"
+        >
+          Confirmer
+        </button>
       </form>
     </div>
   );

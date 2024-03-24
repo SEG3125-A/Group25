@@ -136,10 +136,14 @@ function Ratings() {
         >
           Back
         </button>
-       
-        <button className="btn btn-primary"
+
+        <button
+          className="btn btn-primary"
           style={{ marginRight: "10px" }}
-        type="submit">Confirm</button>
+          type="submit"
+        >
+          Confirm
+        </button>
       </form>
     </div>
   );
