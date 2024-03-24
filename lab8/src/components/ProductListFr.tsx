@@ -113,8 +113,8 @@ function ProductListFr() {
           <div className="card-body">
             <h3>Arsène Wenger</h3>
             <p className="card-text">
-            Wenger s'ouvre sur sa vie, partageant les principes de la réussite sur le terrain et en dehors du terrain, avec des leçons sur le leadership.
-            sur le terrain et en dehors, avec des leçons sur le leadership, le développement personnel et le management.
+            Wenger s'ouvre sur sa vie, partageant les principes de la réussite sur le terrain et en dehors du terrain, avec des leçons sur le leadership
+            sur le terrain et en dehors, le développement personnel et le management.
             </p>
             <p>Auteur: A.Wenger </p>
             <p>Prix: $38</p>
