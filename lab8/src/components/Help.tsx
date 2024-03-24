@@ -64,11 +64,28 @@ function Help() {
     <div className="Help">
       <NavigationBar />
       <div>
-        <h2>Need help? Contact Us</h2>
-        <div class="card w-75">
-          <div class="card-body">
-            <h5 class="card-title">Send an email</h5>
-            <p class="card-text">
+        <h2>How to use the site?</h2>
+        <h3>How to rent for your favourite books:</h3>
+        <ol>Go on Product List page from homepage.</ol>
+        <ol>Read the titles and descriptions of the books available.</ol>
+        <ol>Choose the books you want through the checkboxes.</ol>
+        <ol>Choose the books you want through the checkboxes.</ol>
+        <ol>Enter your name and email address.</ol>
+        <ol>Enter your payment detaila and make sure they are in the valid format.</ol>
+        <ol>Click Confirm to confirm your rental!</ol>
+        
+        <h3>How to rate our books:</h3>
+        <ol>Go ratings page from homepage.</ol>
+        <ol>Enter your name.</ol>
+        <ol>Enter the book you want to rate.</ol>
+        <ol>Give a rating between 1 star to 5 stars.</ol>
+        <ol>Write your opinion on the book.</ol>
+        <ol>Click Confirm to confirm your rating submission!</ol>
+        <h2>Need help with your rentals? Contact Us</h2>
+        <div className="card w-75">
+          <div className="card-body">
+            <h5 className="card-title">Send an email</h5>
+            <p className="card-text">
               <form
                 style={{ maxWidth: "400px", marginLeft: "10px" }}
                 onSubmit={handleSubmit}

@@ -3,16 +3,18 @@ import { Link, useLocation } from "react-router-dom";
 
 function NavigationBar() {
   const location = useLocation();
-  const linkText = location.pathname.split("/")[1];
-  const formattedLinkText =
-    linkText.charAt(0).toUpperCase() + linkText.slice(1);
+  const paths = location.pathname.split("/").filter(Boolean);
+  
   return (
     <div className="navigation-bar">
       <Link to="/">Home</Link>
-      <span> {">"} </span>
-      <Link to={location.pathname}>{formattedLinkText}</Link>
+      {paths.map((path, index) => (
+        <React.Fragment key={path}>
+          <span> {">"} </span>
+          <Link to={"/" + paths.slice(0, index + 1).join("/")}>{path}</Link>
+        </React.Fragment>
+      ))}
     </div>
   );
 }
-
 export default NavigationBar;

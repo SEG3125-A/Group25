@@ -19,7 +19,13 @@ function AppFr() {
   return (
     <div className="container">
       <Routes>
-        <Route path="/" element={<HomePage language={language} handleLanguageSwitch={handleLanguageSwitch} />} />
+      
+  <Route path="/" element={<HomePage language={language} handleLanguageSwitch={handleLanguageSwitch} />} />
+  <Route path="/RatingsFr" element={<RatingsFr />} />
+  <Route path="/product-listFr" element={<ProductListFr />} />
+  <Route path="/HelpFr" element={<HelpFr />} />
+  <Route path="/AppFr" element={<AppFr />} />
+
       </Routes>
     </div>
   );
