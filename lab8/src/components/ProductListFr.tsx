@@ -63,28 +63,28 @@ function ProductListFr() {
 
   const ValidateForm = () => {
     if (!isValidEmail(paymentDetails.email)) {
-      alert("Invalid email address. Please enter a valid email.");
+      alert("L'adresse électronique n'est pas valide. Veuillez saisir une adresse électronique valide.");
       return false;
     }
     if (!isValidCardholderName(paymentDetails.cardholderName)) {
-      alert("Invalid cardholder name. Please enter a valid name.");
+      alert("Le nom du titulaire de la carte n'est pas valide. Veuillez saisir un nom valide.");
       return false;
     }
     if (!isValidCreditCard(paymentDetails.cardNumber)) {
       alert(
-        "Invalid credit card number. Please enter a valid 16-digit number."
+        "Numéro de carte de crédit invalide. Veuillez saisir un numéro à 16 chiffres valide."
       );
       return false;
     }
     if (!isValidExpiryDate(paymentDetails.expiryDate)) {
-      alert("Invalid expiry date. Please enter date in MM/YY format.");
+      alert("Date d'expiration incorrecte. Veuillez saisir la date au format MM/AA.");
       return false;
     }
     if (!isValidCVV(paymentDetails.cvv)) {
-      alert("Invalid CVV. Please enter a valid 3-digit number.");
+      alert("CVV non valide. Veuillez saisir un numéro à 3 chiffres valide.");
       return false;
     }
-    alert("Form submitted!");
+    alert("Formulaire soumis !");
     return true;
   };
 
@@ -94,7 +94,7 @@ function ProductListFr() {
   return (
     <div className="product-list" style={{ margin: "20px 80px" }}>
       <NavigationBar />
-      <h2>Our book selections:</h2>
+      <h2>Notre sélection de livres :</h2>
       <div className="card-container">
         <div className="card" style={{ width: "18rem" }}>
           <img className="card-img-top" src={book1img} alt="Book 1" />
@@ -290,7 +290,7 @@ function ProductListFr() {
             htmlFor="name"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Your Name
+            Votre nom
           </label>
           <input
             type="text"
@@ -307,7 +307,7 @@ function ProductListFr() {
             htmlFor="emailAddress"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Your Email
+            Votre adresse électroniques
           </label>
           <input
             type="email"
@@ -327,7 +327,7 @@ function ProductListFr() {
             htmlFor="appointmentDate"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Choose your date you want to start to rent:
+            Choisissez la date à laquelle vous souhaitez commencer à louer :
           </label>
           <DatePicker
             selected={startDate}
@@ -339,14 +339,14 @@ function ProductListFr() {
       </div>
 
       <div className="payment-form">
-        <h3>Payment Details</h3>
+        <h3>Modalités de paiement</h3>
         {/* Cardholder Name */}
         <div className="form-group" style={{ margin: "10px 0" }}>
           <label
             htmlFor="cardholderName"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Cardholder Name
+            Nom du titulaire de la carte
           </label>
           <input
             type="text"
@@ -365,7 +365,7 @@ function ProductListFr() {
             htmlFor="cardNumber"
             style={{ display: "block", marginBottom: "5px" }}
           >
-            Credit Card Number
+            Numéro de la carte bancaire
           </label>
           <input
             type="text"
@@ -388,7 +388,7 @@ function ProductListFr() {
               htmlFor="expiryDate"
               style={{ display: "block", marginBottom: "5px" }}
             >
-              Expiry Date
+              Date d'expirations
             </label>
             <input
               type="text"
